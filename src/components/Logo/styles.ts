@@ -1,31 +1,31 @@
-import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native';
 
-export const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#0D0D0D'
-    },
-    title: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 70,
-        marginBottom: 24,
-        fontWeight: 'bold'
-    }, 
-    titleTo: {
-        fontSize: 40,
-        color: '#4EA8DE',
-        fontWeight: 'bold'
-    },
-    titleDo: {
-        fontSize: 40,
-        color: '#5E60CE',
-        fontWeight: 'bold'
-    },
-    icon: {
-        marginRight: 10,
-        color: '#5E60CE',
-        fontSize: 40,
-        paddingTop: 4
-    }
-});
+import { ListChecks } from 'phosphor-react-native';
+
+export const Container = styled.View`
+    background-color: #0D0D0D;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 24px;
+    font-weight: bold;
+`
+
+export const Icon = styled(ListChecks).attrs(() => ({
+    color: '#5E60CE',
+    size: 40,
+}))`
+    margin-right: 10px;
+`
+
+export const Title = styled.Text`
+    font-size: 40px;
+    color: #4EA8DE;
+    font-weight: bold;
+`
+
+export const Purple = styled.Text`
+    color: #5E60CE;
+`
+
